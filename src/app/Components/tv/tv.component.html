@@ -1,0 +1,19 @@
+<div class="row my-5">
+    <div class="col-md-2 my-3" *ngFor="let item of trendingTv">
+      <div class="item">
+        <img [src]="imgBaseUrl + item.poster_path" class="img-fluid my-2" >
+        <h2 class="h5">{{item.name}}</h2>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center my-5">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li (click)="prev()" class="page-item"><a class="page-link bg-transparent" >Previous</a></li>
+        <li *ngFor="let page of [1,2,3,4,5] " class="page-item bg-transparent">
+          <a (click)="getTvShows(page)" class="page-link bg-transparent">{{page}}</a>
+        </li>
+        <li (click)="next()" class="page-item"><a class="page-link bg-transparent" >Next</a></li>
+      </ul>
+    </nav>
+  </div>  

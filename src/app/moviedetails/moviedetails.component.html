@@ -1,0 +1,19 @@
+
+ <div class="row my-5">
+ <div class="col-md-3">
+     <img class="img-fluid" [src]="imgPrefix+movieDetails.poster_path" alt="">
+</div>
+
+<div class="col-md-8 my-3">
+    <h1 >{{ movieDetails.name}}</h1>
+    <h1 >{{ movieDetails.title}}</h1>
+    <p  class="text-secondary">{{ movieDetails.tagline}}</p>
+    <h2 class="btn btn-info my-3 mx-1" *ngFor="let item of movieDetails.genres">{{item.name}}</h2>
+    <p class="fs-5">Vote count: {{ movieDetails.vote_count}}</p>
+      <p class="fs-5">popularity {{ movieDetails.popularity}}</p>
+      <p class="fs-5">run time: {{ movieDetails.runtime}}</p>
+
+      <p class="fs-5 text-secondary"> Overview : {{ movieDetails.overview}}</p>
+    </div>
+
+
